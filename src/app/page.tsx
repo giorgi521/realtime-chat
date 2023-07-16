@@ -1,10 +1,12 @@
 import React from 'react';
+import Button from '@/components/ui/Button';
+import { db } from '@/lib/db';
 
-const Home = () => {
+const Home = async () => {
+ await db.set('hello', 'world')
+ 
   return (
-    <div>
-      home
-    </div>
+     <Button varaient="ghost">button</Button>
   );
 };
 
